@@ -1,8 +1,6 @@
-// Root styles
+// Entry point for all partials.
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+@import 'variables';
+@import 'template';
 
 @import 'header';

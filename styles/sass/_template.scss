@@ -1,0 +1,15 @@
+// Styles that pertain to all elements or are used across all pages (not including modules, like
+// the header or footer).
+html, body,
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $body-background-color;
+}
+
+.container {
+  margin: 0 $content-padding;
+}

@@ -1,0 +1,34 @@
+// Header module styles
+header.global-header {
+  height: $header-height;
+  background: $header-background-color url(https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/d2-night.jpg) no-repeat fixed right bottom;
+  background-size: cover;
+
+  .header-login {
+    background-color: $header-login-passive-background-color;
+  }
+  .header-login-wrapper {
+    transition: all $animation-duration $animation-style;
+    transition-property: background-color, width, height;
+    float: right;
+    height: $header-login-passive-height;
+    width: $header-login-passive-width;
+    overflow: visible;
+    margin-top: $content-padding;
+    cursor: default;
+
+    &:hover {
+      background-color: $header-login-active-background-color;
+      width: $header-login-active-width;
+      height: $header-login-active-height;
+    }
+  }
+
+  .header-logo {
+    margin-top: $content-padding;
+  }
+
+  .header-links {
+    list-style: none;
+  }
+}

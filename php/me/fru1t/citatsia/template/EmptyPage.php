@@ -30,6 +30,38 @@ class EmptyPage extends Template {
 	<link type="text/css" rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="global-header">
+    <div class="container">
+      <div class="header-login-wrapper">
+        <div class="header-login-persistent">
+          my asdf
+        </div>
+        <div class="header-login-hidden">
+          
+        </div>
+        <div class="header-login">
+          asdf<br />
+          asdf<br />
+          asdf<br />
+          asdf<br />
+          asdf<br />
+          asdf<br />
+          asdf<br />
+          asdf<br />
+          asdf<br />
+          asdf<br />
+
+        </div>
+      </div>
+      
+      <img class="header-logo"
+           src="https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/church-banner.png" />
+      <ul class="header-links">
+        <li>hi</li>
+        <li>hi again</li>
+      </ul>
+    </div>
+  </header>
 	{$fields[self::FIELD_BODY]}
 </body>
 </html>

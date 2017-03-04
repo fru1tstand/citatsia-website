@@ -1,5 +1,36 @@
-html, body {
+html, body,
+ul, ol, li {
   margin: 0;
   padding: 0; }
+
+body {
+  background-color: #E9E9E9; }
+
+.container {
+  margin: 0 14px; }
+
+header.global-header {
+  height: 300px;
+  background: #232323 url(https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/d2-night.jpg) no-repeat fixed right bottom;
+  background-size: cover; }
+  header.global-header .header-login {
+    background-color: rgba(0, 0, 0, 0.5); }
+  header.global-header .header-login-wrapper {
+    transition: all 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
+    transition-property: background-color, width, height;
+    float: right;
+    height: 50px;
+    width: 300px;
+    overflow: visible;
+    margin-top: 14px;
+    cursor: default; }
+    header.global-header .header-login-wrapper:hover {
+      background-color: #FFF;
+      width: 350px;
+      height: 75px; }
+  header.global-header .header-logo {
+    margin-top: 14px; }
+  header.global-header .header-links {
+    list-style: none; }
 
 /*# sourceMappingURL=global.css.map */

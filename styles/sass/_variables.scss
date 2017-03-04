@@ -1,0 +1,18 @@
+// Global variables introduced before everything.
+$body-background-color: #E9E9E9;
+$content-padding: 14px;
+
+$animation-duration: 0.5s;
+$animation-style: cubic-bezier(0.3, 0.3, 0.02, 1);
+
+
+// Header variables
+$header-background-color: #232323;
+$header-height: 300px;
+
+$header-login-passive-width: 300px;
+$header-login-passive-height: 50px;
+$header-login-active-width: 350px;
+$header-login-active-height: 75px;
+$header-login-passive-background-color: rgba(0, 0, 0, .5);
+$header-login-active-background-color: #FFF;

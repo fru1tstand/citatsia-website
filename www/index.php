@@ -16,7 +16,6 @@ Router::setup()
     ->setPageParameterName(Router::DEFAULT_PAGE_PARAMETER_NAME)
     ->map(Route::create('styles.css', '../styles/out/global.css', Http::HEADER_CONTENT_TYPE_CSS))
     ->map(Route::create('global.css.map', '../styles/out/global.css.map'))
-    ->map(Route::create("banner.png", "../assets/church-banner.png", "Content-Type: image/png"))
     ->complete();
 Templates::setup()->complete();
 

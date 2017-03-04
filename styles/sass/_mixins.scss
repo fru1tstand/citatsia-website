@@ -1,0 +1,6 @@
+// Contains all mixins
+@mixin transition($params...) {
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  transition: $params;
+}

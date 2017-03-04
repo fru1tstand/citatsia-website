@@ -3,9 +3,8 @@ namespace me\fru1t\citasia\content;
 use me\fru1t\citatsia\template\EmptyPage;
 
 $body = <<<HTML
-<header>
-  <img src="/banner.png" />
-</header>
+a
+<div style="height: 1000px;"></div>
 HTML;
 
 EmptyPage::start()
