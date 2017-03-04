@@ -1,15 +1,64 @@
 // Styles that pertain to all elements or are used across all pages (not including modules, like
 // the header or footer).
+* {
+  box-sizing: border-box;
+}
+
 html, body,
 ul, ol, li {
   margin: 0;
   padding: 0;
 }
 
+body,
+button {
+  font-family: $default-font-family;
+}
+
 body {
   background-color: $body-background-color;
 }
 
+%ellipsis-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .container {
   margin: 0 $content-padding;
+}
+
+// Form controls
+input {
+  border: none;
+  border-bottom: 2px solid $input-passive-border-color;
+  transition: border-color $animation-duration $animation-style;
+  outline: none;
+  color: $input-color;
+
+  &:focus {
+    border-color: $input-active-border-color;
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+
+  &[type=submit] {
+    background-color: $input-active-border-color;
+    color: #FFF;
+
+    &:hover {
+      background-color: darken($input-active-border-color, 5%);
+    }
+  }
+}
+
+.spacer {
+  &.content {
+    height: $content-padding;
+  }
 }

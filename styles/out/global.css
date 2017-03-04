@@ -1,36 +1,151 @@
+* {
+  box-sizing: border-box; }
+
 html, body,
 ul, ol, li {
   margin: 0;
   padding: 0; }
 
+body,
+button {
+  font-family: Raleway, sans-serif; }
+
 body {
   background-color: #E9E9E9; }
 
-.container {
-  margin: 0 14px; }
+.global-header .header-login-wrapper .header-login-persistent .left {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
 
-header.global-header {
-  height: 300px;
-  background: #232323 url(https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/d2-night.jpg) no-repeat fixed right bottom;
+.container {
+  margin: 0 64px; }
+
+input {
+  border: none;
+  border-bottom: 2px solid #CCC;
+  transition: border-color 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
+  outline: none;
+  color: #505050; }
+  input:focus {
+    border-color: #00a001; }
+
+button {
+  border: none;
+  cursor: pointer;
+  display: inline-block; }
+  button[type=submit] {
+    background-color: #00a001;
+    color: #FFF; }
+    button[type=submit]:hover {
+      background-color: #008701; }
+
+.spacer.content {
+  height: 64px; }
+
+.global-header {
+  height: 200px;
+  background: #232323 url("https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/d2-night.jpg") no-repeat fixed right bottom;
   background-size: cover; }
-  header.global-header .header-login {
-    background-color: rgba(0, 0, 0, 0.5); }
-  header.global-header .header-login-wrapper {
-    transition: all 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
-    transition-property: background-color, width, height;
+  .global-header .header-logo {
+    margin-top: 140px;
+    height: 60px;
+    margin-left: 64px;
+    display: block;
+    position: absolute; }
+  .global-header .header-login-wrapper {
     float: right;
-    height: 50px;
+    margin-right: 44px;
+    margin-top: 16px;
+    color: #FFF;
     width: 300px;
+    height: 75px;
     overflow: visible;
-    margin-top: 14px;
-    cursor: default; }
-    header.global-header .header-login-wrapper:hover {
+    box-shadow: none;
+    transition: all 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
+    transition-property: background-color, color, box-shadow;
+    border-radius: 4px 4px 0 0; }
+    .global-header .header-login-wrapper .header-login-persistent {
+      display: flex;
+      align-items: center;
+      padding: 20px; }
+      .global-header .header-login-wrapper .header-login-persistent .left {
+        flex: 1 1 auto;
+        padding-right: 20px;
+        text-align: right; }
+      .global-header .header-login-wrapper .header-login-persistent .right {
+        height: 35px;
+        width: 35px;
+        flex: 0 0 35px;
+        border-radius: 20px;
+        transition: border-radius 0.5s cubic-bezier(0.3, 0.3, 0.02, 1); }
+    .global-header .header-login-wrapper .header-login-hidden-wrapper {
+      transition: all 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
+      transition-property: max-height, background-color, box-shadow;
+      max-height: 0;
+      overflow: hidden;
+      border-radius: 0 0 4px 4px;
+      color: #191919; }
+      .global-header .header-login-wrapper .header-login-hidden-wrapper > div {
+        transition: opacity 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
+        opacity: 0; }
+    .global-header .header-login-wrapper:hover {
+      color: #191919;
       background-color: #FFF;
-      width: 350px;
-      height: 75px; }
-  header.global-header .header-logo {
-    margin-top: 14px; }
-  header.global-header .header-links {
-    list-style: none; }
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+      .global-header .header-login-wrapper:hover .header-login-persistent {
+        border-bottom: 1px solid #CCC; }
+        .global-header .header-login-wrapper:hover .header-login-persistent .right {
+          border-radius: 0; }
+        .global-header .header-login-wrapper:hover .header-login-persistent .left {
+          text-align: left; }
+      .global-header .header-login-wrapper:hover .header-login-hidden-wrapper {
+        max-height: 500px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background-color: #FFF; }
+        .global-header .header-login-wrapper:hover .header-login-hidden-wrapper > div {
+          opacity: 1; }
+  .global-header .header-login-form {
+    padding: 20px; }
+    .global-header .header-login-form .header-login-form-title {
+      padding-bottom: 20px; }
+    .global-header .header-login-form input {
+      margin-bottom: 20px;
+      width: 100%;
+      font-size: 16px; }
+    .global-header .header-login-form button {
+      padding: 6px 12px;
+      font-size: 16px; }
+  .global-header .header-login-form-submit-wrapper {
+    display: flex;
+    align-items: baseline; }
+    .global-header .header-login-form-submit-wrapper .left {
+      flex: 1 1 auto; }
+    .global-header .header-login-form-submit-wrapper .right {
+      flex: 1 1 auto;
+      text-align: right;
+      font-size: 12px;
+      color: #CCC; }
+    .global-header .header-login-form-submit-wrapper a, .global-header .header-login-form-submit-wrapper a:link, .global-header .header-login-form-submit-wrapper a:visited {
+      text-decoration: none;
+      color: #00a001; }
+    .global-header .header-login-form-submit-wrapper a:hover, .global-header .header-login-form-submit-wrapper a:active {
+      color: #005401; }
+
+.global-header-nav .header-links {
+  list-style: none;
+  padding: 0 44px;
+  background-color: #00a001; }
+  .global-header-nav .header-links li {
+    display: inline-block; }
+  .global-header-nav .header-links a, .global-header-nav .header-links a:link, .global-header-nav .header-links a:visited {
+    padding: 16px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #00a001;
+    color: #E9E9E9;
+    display: inline-block; }
+  .global-header-nav .header-links a:hover, .global-header-nav .header-links a:active {
+    color: #FFF; }
 
 /*# sourceMappingURL=global.css.map */

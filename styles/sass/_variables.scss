@@ -1,18 +1,35 @@
 // Global variables introduced before everything.
 $body-background-color: #E9E9E9;
-$content-padding: 14px;
+$content-padding: 64px;
+$default-font-family: Raleway, sans-serif;
 
 $animation-duration: 0.5s;
 $animation-style: cubic-bezier(0.3, 0.3, 0.02, 1);
 
+$box-shadow-layer-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+$input-passive-border-color: #CCC;
+$input-active-border-color: #00a001;
+$input-color: #505050;
 
 // Header variables
 $header-background-color: #232323;
-$header-height: 300px;
+$header-height: 200px;
 
-$header-login-passive-width: 300px;
-$header-login-passive-height: 50px;
-$header-login-active-width: 350px;
-$header-login-active-height: 75px;
-$header-login-passive-background-color: rgba(0, 0, 0, .5);
+$header-login-padding: 20px;
+$header-login-width: 300px;
+$header-login-border-radius: 4px;
+$header-login-active-border-color: #CCC;
+$header-login-passive-height: 35px;
+$header-login-active-box-shadow: $box-shadow-layer-1;
 $header-login-active-background-color: #FFF;
+$header-login-active-color: #191919;
+
+$header-logo-height: 60px;
+
+$header-links-background-color: #00a001;
+$header-links-link-passive-color: #E9E9E9;
+$header-links-link-active-color: #FFF;
+$header-links-vertical-padding: 16px;
+$header-links-horizontal-padding: 20px;
+$header-links-active-border-height: 5px;

@@ -25,43 +25,52 @@ class EmptyPage extends Template {
 <head>
 	<title>Church of Citatsia - {$fields[self::FIELD_HTML_TITLE]}</title>
 	<meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="global-header">
-    <div class="container">
-      <div class="header-login-wrapper">
-        <div class="header-login-persistent">
-          my asdf
-        </div>
+    <img class="header-logo"
+         src="https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/church-banner.png" />
+    
+    <div class="header-login-wrapper">
+      <div class="header-login-persistent">
+        <div class="left">Welcome, Guest</div>
+        <img class="right" src="http://www.citatsia.com/forum/style/anonymous.gif" alt="profile"/>
+      </div>
+      <div class="header-login-hidden-wrapper">
         <div class="header-login-hidden">
-          
-        </div>
-        <div class="header-login">
-          asdf<br />
-          asdf<br />
-          asdf<br />
-          asdf<br />
-          asdf<br />
-          asdf<br />
-          asdf<br />
-          asdf<br />
-          asdf<br />
-          asdf<br />
-
+          <div class="header-login-form">
+            <div class="header-login-form-title">Sign in</div>
+            <form action="login/" method="post">
+              <input type="text" name="username" placeholder="Username" />
+              <input type="password" name="password" placeholder="Password" />
+              <div class="spacer content"></div>
+              <div class="header-login-form-submit-wrapper">
+                <div class="left">
+                  <button type="submit">Login</button>
+                </div>
+                <div class="right">
+                  <a href="#">Forgot Password</a> | <a href="#">Register</a>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      
-      <img class="header-logo"
-           src="https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/church-banner.png" />
-      <ul class="header-links">
-        <li>hi</li>
-        <li>hi again</li>
-      </ul>
     </div>
   </header>
+  <div class="global-header-nav">
+    <ul class="header-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Forum</a></li>
+      <li><a href="#">SourceBans</a></li>
+    </ul>
+  </div>
+  
 	{$fields[self::FIELD_BODY]}
 </body>
 </html>
