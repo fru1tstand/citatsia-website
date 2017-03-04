@@ -11,8 +11,8 @@ Autoload::setup(PHP_ROOT);
 
 Router::setup()
     ->setContentDirectory('../php/me/fru1t/citatsia/content')
-    ->setDefaultContentPagePath('index.php')
-    ->setErrorPagePath('index.php')
+    ->setDefaultContentPagePath('home.php')
+    ->setErrorPagePath('home.php')
     ->setPageParameterName(Router::DEFAULT_PAGE_PARAMETER_NAME)
     ->map(Route::create('styles.css', '../styles/out/global.css', Http::HEADER_CONTENT_TYPE_CSS))
     ->map(Route::create('global.css.map', '../styles/out/global.css.map'))

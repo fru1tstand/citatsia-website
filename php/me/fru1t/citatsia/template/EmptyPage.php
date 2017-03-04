@@ -26,7 +26,8 @@ class EmptyPage extends Template {
 	<title>Church of Citatsia - {$fields[self::FIELD_HTML_TITLE]}</title>
 	<meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	
+  
+  <link rel="icon" href="http://www.citatsia.com/forum/style/pepper.ico">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="styles.css" />
 </head>
@@ -64,10 +65,11 @@ class EmptyPage extends Template {
   </header>
   <div class="global-header-nav">
     <ul class="header-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Forum</a></li>
-      <li><a href="#">SourceBans</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="forum">Forum</a></li>
+      <li><a href="members">Members</a></li>
+      <li><a href="sourcebans">SourceBans</a></li>
     </ul>
   </div>
   
