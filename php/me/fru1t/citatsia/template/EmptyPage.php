@@ -1,5 +1,6 @@
 <?php
 namespace me\fru1t\citatsia\template;
+use me\fru1t\citatsia\LoginHandler;
 use me\fru1t\common\template\Template;
 use me\fru1t\common\template\TemplateField;
 
@@ -19,6 +20,7 @@ class EmptyPage extends Template {
    * @return string
    */
   public static function getTemplateRenderContents_internal(array $fields): string {
+    $loginModuleHtml = LoginHandler::getLoginModuleHtml();
     return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -37,30 +39,7 @@ class EmptyPage extends Template {
          src="https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/church-banner.png" />
     
     <div class="header-login-wrapper">
-      <div class="header-login-persistent">
-        <div class="left">Welcome, Guest</div>
-        <img class="right" src="http://www.citatsia.com/forum/style/anonymous.gif" alt="profile"/>
-      </div>
-      <div class="header-login-hidden-wrapper">
-        <div class="header-login-hidden">
-          <div class="header-login-form">
-            <div class="header-login-form-title">Sign in</div>
-            <form action="login/" method="post">
-              <input type="text" name="username" placeholder="Username" />
-              <input type="password" name="password" placeholder="Password" />
-              <div class="spacer content"></div>
-              <div class="header-login-form-submit-wrapper">
-                <div class="left">
-                  <button type="submit">Login</button>
-                </div>
-                <div class="right">
-                  <a href="#">Forgot Password</a> | <a href="#">Register</a>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+      $loginModuleHtml
     </div>
   </header>
   <div class="global-header-nav">
