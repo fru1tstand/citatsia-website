@@ -10,7 +10,6 @@ $body = <<<HTML
 <div class="spacer content"></div>
 <div class="container centered">
   <div class="section-title">Servers</div>
-  <div class="spacer section-title"></div>
   
   <div class="gametracker-wrapper">
     <iframe class="gametracker"

@@ -175,7 +175,7 @@ button {
   display: inline-block;
   vertical-align: top;
   width: 274px;
-  margin: 0 12px; }
+  margin: 16px 12px 0; }
   .gametracker-wrapper a, .gametracker-wrapper a:link, .gametracker-wrapper a:visited {
     margin-top: 8px;
     display: block;
