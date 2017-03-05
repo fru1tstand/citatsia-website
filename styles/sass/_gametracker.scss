@@ -1,0 +1,32 @@
+// Gametracker styles
+
+.gametracker-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px + 24px;
+  margin: 0 12px;
+
+  a {
+    &, &:link, &:visited {
+      @extend %layer-1;
+      margin-top: 8px;
+      display: block;
+      background-color: $card-passive-background-color;
+      color: $card-active-background-color;
+      padding: 4px 0;
+    }
+    &:hover, &:active {
+      background-color: $card-active-background-color;
+      color: $card-active-color;
+    }
+  }
+}
+
+.gametracker {
+  @extend %layer-1;
+  display: block;
+  height: 146px;
+  background-color: #FFF;
+  padding: 12px;
+  width: 250px + 24px;
+}

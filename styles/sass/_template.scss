@@ -19,14 +19,28 @@ body {
   background-color: $body-background-color;
 }
 
+a {
+  text-decoration: none;
+}
+
 %ellipsis-overflow {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
+%layer-1 {
+  box-shadow: $box-shadow-layer-1;
+}
+
 .container {
-  margin: 0 $content-padding;
+  padding: 0 $content-padding;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.centered {
+  text-align: center;
 }
 
 // Form controls
@@ -57,8 +71,20 @@ button {
   }
 }
 
+// Spacers
 .spacer {
   &.content {
     height: $content-padding;
   }
+  &.card {
+    height: 8px;
+  }
+  &.section-title {
+    height: 16px;
+  }
+}
+
+.section-title {
+  font-size: 23px;
+  text-align: left;
 }

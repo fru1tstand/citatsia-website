@@ -13,13 +13,24 @@ button {
 body {
   background-color: #E9E9E9; }
 
+a {
+  text-decoration: none; }
+
 .global-header .header-login-wrapper .header-login-persistent .left {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; }
 
+.gametracker-wrapper a, .gametracker-wrapper a:link, .gametracker-wrapper a:visited, .gametracker {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
 .container {
-  margin: 0 64px; }
+  padding: 0 64px;
+  margin: 0 auto;
+  max-width: 1920px; }
+
+.centered {
+  text-align: center; }
 
 input {
   border: none;
@@ -42,11 +53,21 @@ button {
 
 .spacer.content {
   height: 64px; }
+.spacer.card {
+  height: 8px; }
+.spacer.section-title {
+  height: 16px; }
+
+.section-title {
+  font-size: 23px;
+  text-align: left; }
 
 .global-header {
   height: 200px;
   background: #232323 url("https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/d2-night.jpg") no-repeat fixed right bottom;
-  background-size: cover; }
+  background-size: cover;
+  position: relative;
+  z-index: 999; }
   .global-header .header-logo {
     margin-top: 140px;
     height: 60px;
@@ -147,5 +168,27 @@ button {
     display: inline-block; }
   .global-header-nav .header-links a:hover, .global-header-nav .header-links a:active {
     color: #FFF; }
+
+.gametracker-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 274px;
+  margin: 0 12px; }
+  .gametracker-wrapper a, .gametracker-wrapper a:link, .gametracker-wrapper a:visited {
+    margin-top: 8px;
+    display: block;
+    background-color: #FFF;
+    color: #00a001;
+    padding: 4px 0; }
+  .gametracker-wrapper a:hover, .gametracker-wrapper a:active {
+    background-color: #00a001;
+    color: #FFF; }
+
+.gametracker {
+  display: block;
+  height: 146px;
+  background-color: #FFF;
+  padding: 12px;
+  width: 274px; }
 
 /*# sourceMappingURL=global.css.map */

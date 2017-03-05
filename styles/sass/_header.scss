@@ -3,6 +3,8 @@
   height: $header-height;
   background: $header-background-color url('https://s3-us-west-1.amazonaws.com/fm-msc/citatsia/d2-night.jpg') no-repeat fixed right bottom;
   background-size: cover;
+  position: relative;
+  z-index: 999;
 
   .header-logo {
     margin-top: $header-height - $header-logo-height;
