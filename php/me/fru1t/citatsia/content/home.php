@@ -1,6 +1,10 @@
 <?php
 namespace me\fru1t\citasia\content;
+use me\fru1t\citatsia\FakeData;
 use me\fru1t\citatsia\template\EmptyPage;
+use me\fru1t\citatsia\template\forum\ForumBoard;
+
+$newsForumBoardHtml = ForumBoard::createFrom(FakeData::getFakeForumBoardPosts())->render(false, true);
 
 $body = <<<HTML
 <div class="spacer content"></div>
@@ -42,33 +46,7 @@ $body = <<<HTML
 <div class="container">
   <div class="section-title">News</div>
   <div class="spacer section-title"></div>
-  
-  <div class="forum-board">
-    <div class="forum-board-post">
-      <div class="header">
-        <div class="title">
-          <a href="#">Reminiscing on resigning mod witha super long title becuase we like to break
-            things and test that hting won't break when we do because that's ust good QA.</a>
-        </div>
-        <div class="comments">0</div>
-        <div class="date">March 1st, 2017 11:15pm</div>
-        <div class="author"><a href="#">GLA3PAC</a></div>
-      </div>
-      <div class="body">So yeah I'm thinking about resigning. I'm kind of convinced I was never meant to become considering my privileges don't work. I type sm_mute @me test in console than in in game chat it says error than some random ass number so yeah thats it.0
-        Signed by GLA|3PAC the true rap god as futom would say</div>
-    </div>
-    <div class="forum-board-post">
-      <div class="header">
-        <div class="title"><a href="#">Reminiscing on resigning mod</a></div>
-        <div class="comments">0</div>
-        <div class="date">September 30th, 2020 12:30pm</div>
-        <div class="author"><a href="#">GLA3PAC</a></div>
-      </div>
-      <div class="body">So yeah I'm thinking about resigning. I'm kind of convinced I was never meant to become considering my privileges don't work. I type sm_mute @me test in console than in in game chat it says error than some random ass number so yeah thats it.0
-        Signed by GLA|3PAC the true rap god as futom would say</div>
-    </div>
-
-  </div>
+  $newsForumBoardHtml
 </div>
 
 HTML;

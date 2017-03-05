@@ -4,7 +4,6 @@
 }
 
 .forum-board {
-
   @extend %layer-1;
   background-color: $forum-post-passive-background-color;
 }
@@ -22,7 +21,7 @@
   }
 
   .header {
-    padding: $forum-post-padding $forum-post-padding/2;
+    padding: ($forum-post-padding - $forum-board-post-hint-height) $forum-post-padding/2 $forum-post-padding;
     display: flex;
     align-items: flex-start;
     font-size: 14px;
@@ -37,19 +36,25 @@
     > div::before {
       color: $forum-post-break-border-color;
       font-size: 10px;
+      opacity: 0;
       display: block;
+      transition: opacity $animation-duration $animation-style;
+      height: $forum-board-post-hint-height;
+    }
+    > div:hover::before {
+      opacity: 1;
     }
 
     .title {
       flex: 1 1 auto;
-      font-size: 19px;
+      font-size: 18px;
       padding: 0 $forum-post-padding/2;
       &::before {
         content: 'title';
       }
     }
     .comments {
-      width: 50px;
+      width: 55px;
       &::before {
         content: 'replies';
       }

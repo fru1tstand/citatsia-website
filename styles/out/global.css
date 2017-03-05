@@ -203,7 +203,7 @@ button {
   .forum-board-post a:hover, .forum-board-post a:active {
     color: #007701; }
   .forum-board-post .header {
-    padding: 18px 9px;
+    padding: 9px 9px 18px;
     display: flex;
     align-items: flex-start;
     font-size: 14px; }
@@ -214,15 +214,20 @@ button {
     .forum-board-post .header > div::before {
       color: #CCC;
       font-size: 10px;
-      display: block; }
+      opacity: 0;
+      display: block;
+      transition: opacity 0.5s cubic-bezier(0.3, 0.3, 0.02, 1);
+      height: 9px; }
+    .forum-board-post .header > div:hover::before {
+      opacity: 1; }
     .forum-board-post .header .title {
       flex: 1 1 auto;
-      font-size: 19px;
+      font-size: 18px;
       padding: 0 9px; }
       .forum-board-post .header .title::before {
         content: 'title'; }
     .forum-board-post .header .comments {
-      width: 50px; }
+      width: 55px; }
       .forum-board-post .header .comments::before {
         content: 'replies'; }
     .forum-board-post .header .date {
