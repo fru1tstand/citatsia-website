@@ -53,6 +53,8 @@ class EmptyPage extends Template {
   </div>
   
 	{$fields[self::FIELD_BODY]}
+	
+	<div class="spacer footer"></div>
 </body>
 </html>
 HTML;

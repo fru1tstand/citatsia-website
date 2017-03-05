@@ -16,12 +16,12 @@ body {
 a {
   text-decoration: none; }
 
-.global-header .header-login-wrapper .header-login-persistent .left {
+.global-header .header-login-wrapper .header-login-persistent .left, .forum-board-post .header .comments, .forum-board-post .header .date, .forum-board-post .header .author {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; }
 
-.gametracker-wrapper a, .gametracker-wrapper a:link, .gametracker-wrapper a:visited, .gametracker {
+.gametracker-wrapper a, .gametracker-wrapper a:link, .gametracker-wrapper a:visited, .gametracker, .forum-board {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .container {
@@ -57,6 +57,8 @@ button {
   height: 8px; }
 .spacer.section-title {
   height: 16px; }
+.spacer.footer {
+  height: 75px; }
 
 .section-title {
   font-size: 23px;
@@ -190,5 +192,52 @@ button {
   background-color: #FFF;
   padding: 12px;
   width: 274px; }
+
+.forum-board {
+  background-color: #FFF; }
+
+.forum-board-post {
+  border-top: 1px solid #CCC; }
+  .forum-board-post a, .forum-board-post a:link, .forum-board-post a:visited {
+    color: #00a001; }
+  .forum-board-post a:hover, .forum-board-post a:active {
+    color: #007701; }
+  .forum-board-post .header {
+    padding: 18px 9px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px; }
+    .forum-board-post .header .comments, .forum-board-post .header .date, .forum-board-post .header .author {
+      padding: 0 9px;
+      flex: 0 0 auto;
+      text-align: right; }
+    .forum-board-post .header > div::before {
+      color: #CCC;
+      font-size: 10px;
+      display: block; }
+    .forum-board-post .header .title {
+      flex: 1 1 auto;
+      font-size: 19px;
+      padding: 0 9px; }
+      .forum-board-post .header .title::before {
+        content: 'title'; }
+    .forum-board-post .header .comments {
+      width: 50px; }
+      .forum-board-post .header .comments::before {
+        content: 'replies'; }
+    .forum-board-post .header .date {
+      width: 230px; }
+      .forum-board-post .header .date::before {
+        content: 'created'; }
+    .forum-board-post .header .author {
+      width: 150px; }
+      .forum-board-post .header .author::before {
+        content: 'author'; }
+  .forum-board-post .body {
+    color: #999;
+    font-size: 14px;
+    padding: 0 18px 18px; }
+  .forum-board-post:nth-child(1) {
+    border-top: none; }
 
 /*# sourceMappingURL=global.css.map */
