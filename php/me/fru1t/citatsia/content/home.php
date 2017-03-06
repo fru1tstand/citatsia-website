@@ -16,28 +16,28 @@ $body = <<<HTML
             src="http://cache.gametracker.com/components/html0/?host=162.248.94.109:27016&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
             frameborder="0"
             scrolling="no"></iframe>
-    <a href="steam://connect/162.248.94.109:27016">Join</a>
+    <a class="card-link" href="steam://connect/162.248.94.109:27016">Join</a>
   </div>
   <div class="gametracker-wrapper">
     <iframe class="gametracker"
             src="http://cache.gametracker.com/components/html0/?host=66.85.14.117:27015&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
             frameborder="0"
             scrolling="no"></iframe>
-    <a href="steam://connect/66.85.14.117:27015">Join</a>
+    <a class="card-link" href="steam://connect/66.85.14.117:27015">Join</a>
   </div>
   <div class="gametracker-wrapper">
     <iframe class="gametracker"
             src="http://cache.gametracker.com/components/html0/?host=66.150.164.139:27015&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
             frameborder="0"
             scrolling="no"></iframe>
-    <a href="steam://connect/66.150.164.139:27015">Join</a>
+    <a class="card-link" href="steam://connect/66.150.164.139:27015">Join</a>
   </div>
   <div class="gametracker-wrapper">
     <iframe class="gametracker"
             src="http://cache.gametracker.com/components/html0/?host=208.146.44.122:27015&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
             frameborder="0"
             scrolling="no"></iframe>
-    <a href="steam://connect/208.146.44.122:27015">Join</a>
+    <a class="card-link" href="steam://connect/208.146.44.122:27015">Join</a>
   </div>
 </div>
 

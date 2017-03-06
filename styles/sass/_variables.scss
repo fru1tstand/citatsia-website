@@ -1,5 +1,28 @@
 // Global variables introduced before everything.
-$body-background-color: #E9E9E9;
+$color-off-white: #E9E9E9;
+$color-white: #FFF;
+$color-grey: #CCC;
+$color-dark-grey: #999;
+$color-electric-lime: #88D317;
+$color-deep-plum: #1A0315;
+$color-shadow: #535353;
+$color-violet: #6E3667;
+
+$body-background-color: $color-off-white;
+$body-color: $color-deep-plum;
+
+// Form defaults
+$input-passive-border-color: $color-grey;
+$input-active-border-color: $color-violet;
+$input-color: $color-deep-plum;
+
+$button-passive-background-color: $color-violet;
+$button-active-background-color: lighten($color-violet, 5%);
+$button-color: $color-white;
+
+$link-passive-color: $color-violet;
+$link-active-color: lighten($color-violet, 15%);
+
 $content-padding: 64px;
 $default-font-family: Raleway, sans-serif;
 
@@ -8,42 +31,43 @@ $animation-style: cubic-bezier(0.3, 0.3, 0.02, 1);
 
 $box-shadow-layer-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
-$input-passive-border-color: #CCC;
-$input-active-border-color: #00a001;
-$input-color: #505050;
-
 // Header variables
-$header-background-color: #232323;
+$header-background-color: $color-off-white;
 $header-height: 200px;
 
 $header-login-padding: 20px;
 $header-login-width: 300px;
 $header-login-border-radius: 4px;
-$header-login-active-border-color: #CCC;
 $header-login-passive-height: 35px;
+$header-login-active-border-color: $color-grey;
 $header-login-active-box-shadow: $box-shadow-layer-1;
-$header-login-active-background-color: #FFF;
-$header-login-active-color: #191919;
+$header-login-active-background-color: $color-white;
+$header-login-active-color: $color-deep-plum;
 
 $header-logo-height: 60px;
 
-$header-links-background-color: #00a001;
-$header-links-link-passive-color: #E9E9E9;
-$header-links-link-active-color: #FFF;
+$header-links-background-color: $color-deep-plum;
+$header-links-link-passive-color: $color-off-white;
+$header-links-link-active-color: $color-electric-lime;
 $header-links-vertical-padding: 16px;
 $header-links-horizontal-padding: 20px;
 $header-links-active-border-height: 5px;
 
-// Template related
-$card-active-background-color: #00a001;
-$card-active-color: #FFF;
-$card-passive-background-color: #FFF;
-$card-passive-color: #000;
+// Cards
+$card-background-color: $color-white;
+$card-color: $body-color;
+
+$card-link-active-color: $color-white;
+$card-link-active-background-color: $color-electric-lime;
+$card-link-passive-color: $color-violet;
+$card-link-passive-background-color: $color-white;
+
 
 // Forum vars
-$forum-post-break-border-color: #CCC;
-$forum-post-passive-background-color: #FFF;
+$forum-post-break-border-color: $color-grey;
 $forum-post-padding: 18px;
-$forum-board-post-body-color: #999;
-$forum-board-post-passive-title-color: #00a001;
+$forum-post-background-color: $color-white;
+$forum-board-post-body-color: $color-dark-grey;
 $forum-board-post-hint-height: 9px;
+$forum-board-post-passive-title-color: $color-violet;
+$forum-board-post-active-title-color: $color-electric-lime;

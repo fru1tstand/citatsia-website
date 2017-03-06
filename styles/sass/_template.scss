@@ -17,20 +17,13 @@ button {
 
 body {
   background-color: $body-background-color;
-}
-
-a {
-  text-decoration: none;
+  color: $body-color;
 }
 
 %ellipsis-overflow {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-}
-
-%layer-1 {
-  box-shadow: $box-shadow-layer-1;
 }
 
 .container {
@@ -62,12 +55,22 @@ button {
   display: inline-block;
 
   &[type=submit] {
-    background-color: $input-active-border-color;
-    color: #FFF;
+    background-color: $button-passive-background-color;
+    color: $button-color;
 
     &:hover {
-      background-color: darken($input-active-border-color, 5%);
+      background-color: $button-active-background-color;
     }
+  }
+}
+
+a {
+  &, &:link, &:visited {
+    text-decoration: none;
+    color: $link-passive-color;
+  }
+  &:hover, &:active {
+    color: $link-active-color;
   }
 }
 
@@ -90,4 +93,22 @@ button {
 .section-title {
   font-size: 23px;
   text-align: left;
+}
+
+// Cards
+%layer-1 {
+  box-shadow: $box-shadow-layer-1;
+}
+
+.card-link {
+  &, &:link, &:visited {
+    display: block;
+    background-color: $card-link-passive-background-color;
+    color: $card-link-passive-color;
+  }
+
+  &:hover, &:visited {
+    background-color: $card-link-active-background-color;
+    color: $card-link-active-color;
+  }
 }

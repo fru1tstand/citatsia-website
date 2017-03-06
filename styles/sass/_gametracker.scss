@@ -1,5 +1,4 @@
 // Gametracker styles
-
 .gametracker-wrapper {
   display: inline-block;
   vertical-align: top;
@@ -9,15 +8,8 @@
   a {
     &, &:link, &:visited {
       @extend %layer-1;
-      margin-top: 8px;
-      display: block;
-      background-color: $card-passive-background-color;
-      color: $card-active-background-color;
+      margin-top: 4px;
       padding: 4px 0;
-    }
-    &:hover, &:active {
-      background-color: $card-active-background-color;
-      color: $card-active-color;
     }
   }
 }

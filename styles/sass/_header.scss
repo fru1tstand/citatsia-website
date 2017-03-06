@@ -60,7 +60,7 @@
       max-height: 0;
       overflow: hidden;
       border-radius: 0 0 $header-login-border-radius $header-login-border-radius;
-      color :$header-login-active-color;
+      color: $header-login-active-color;
 
       > div {
         transition: opacity $animation-duration $animation-style;
@@ -127,16 +127,6 @@
       text-align: right;
       font-size: 12px;
       color: $header-login-active-border-color;
-    }
-
-    a {
-      &, &:link, &:visited {
-        text-decoration: none;
-        color: $input-active-border-color;
-      }
-      &:hover, &:active {
-        color: darken($input-active-border-color, 15%);
-      }
     }
   }
 }

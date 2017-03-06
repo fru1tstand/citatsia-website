@@ -1,13 +1,12 @@
 // Styles pertaining to forum elements
-.forum {
 
-}
-
+// A board wraps board posts, providing a grouping of clickable post titles
 .forum-board {
   @extend %layer-1;
-  background-color: $forum-post-passive-background-color;
+  background-color: $forum-post-background-color;
 }
 
+// A single clickable title to navigate to a post
 .forum-board-post {
   border-top: 1px solid $forum-post-break-border-color;
 
@@ -16,7 +15,7 @@
       color: $forum-board-post-passive-title-color;
     }
     &:hover, &:active {
-      color: darken($forum-board-post-passive-title-color, 8%);
+      color: $forum-board-post-active-title-color;
     }
   }
 
@@ -28,27 +27,35 @@
 
     .comments, .date, .author {
       @extend %ellipsis-overflow;
-      padding: 0 $forum-post-padding/2;
       flex: 0 0 auto;
       text-align: right;
     }
 
-    > div::before {
-      color: $forum-post-break-border-color;
-      font-size: 10px;
-      opacity: 0;
-      display: block;
-      transition: opacity $animation-duration $animation-style;
-      height: $forum-board-post-hint-height;
-    }
-    > div:hover::before {
-      opacity: 1;
+    // Selects comments, date, author, and title
+    > div {
+      padding: 0 $forum-post-padding/2;
+
+      &::before {
+        color: $forum-post-break-border-color;
+        font-size: 10px;
+        opacity: 0;
+        display: block;
+        transition: opacity $animation-duration $animation-style;
+        height: $forum-board-post-hint-height;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
     }
 
     .title {
       flex: 1 1 auto;
-      font-size: 18px;
-      padding: 0 $forum-post-padding/2;
+
+      a {
+        font-size: 16px;
+        display: block;
+      }
       &::before {
         content: 'title';
       }
