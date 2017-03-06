@@ -3,12 +3,11 @@
   display: inline-block;
   vertical-align: top;
   width: 250px + 24px;
-  margin: 16px 12px 0;
+  margin: $spacing-medium 12px 0;
 
   a {
     &, &:link, &:visited {
-      @extend %layer-1;
-      margin-top: 4px;
+      margin-top: $spacing-small;
       padding: 4px 0;
     }
   }

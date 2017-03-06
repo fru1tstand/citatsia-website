@@ -3,50 +3,25 @@ namespace me\fru1t\citasia\content;
 use me\fru1t\citatsia\FakeData;
 use me\fru1t\citatsia\template\EmptyPage;
 use me\fru1t\citatsia\template\forum\ForumBoard;
+use me\fru1t\citatsia\template\prefab\Gametracker;
 
-$newsForumBoardHtml = ForumBoard::createFrom(FakeData::getFakeForumBoardPosts())->render(false, true);
+$newsForumBoardHtml = ForumBoard::createFrom(FakeData::getFakeForumBoardPosts())
+    ->render(false, true);
+$gametrackerHtml = Gametracker::start()->render(false, true);
 
 $body = <<<HTML
-<div class="spacer content"></div>
-<div class="container centered">
-  <div class="section-title">Servers</div>
-  
-  <div class="gametracker-wrapper">
-    <iframe class="gametracker"
-            src="http://cache.gametracker.com/components/html0/?host=162.248.94.109:27016&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
-            frameborder="0"
-            scrolling="no"></iframe>
-    <a class="card-link" href="steam://connect/162.248.94.109:27016">Join</a>
-  </div>
-  <div class="gametracker-wrapper">
-    <iframe class="gametracker"
-            src="http://cache.gametracker.com/components/html0/?host=66.85.14.117:27015&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
-            frameborder="0"
-            scrolling="no"></iframe>
-    <a class="card-link" href="steam://connect/66.85.14.117:27015">Join</a>
-  </div>
-  <div class="gametracker-wrapper">
-    <iframe class="gametracker"
-            src="http://cache.gametracker.com/components/html0/?host=66.150.164.139:27015&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
-            frameborder="0"
-            scrolling="no"></iframe>
-    <a class="card-link" href="steam://connect/66.150.164.139:27015">Join</a>
-  </div>
-  <div class="gametracker-wrapper">
-    <iframe class="gametracker"
-            src="http://cache.gametracker.com/components/html0/?host=208.146.44.122:27015&bgColor=FFFFFF&fontColor=000000&titleBgColor=FFFFFF&titleColor=000000&borderColor=FFFFFF&linkColor=00A001&borderLinkColor=000000&showMap=0&showCurrPlayers=0&showTopPlayers=0&showBlogs=0&width=250"
-            frameborder="0"
-            scrolling="no"></iframe>
-    <a class="card-link" href="steam://connect/208.146.44.122:27015">Join</a>
-  </div>
-</div>
+<section class="container">
+  <div class="page-title">Home</div>
+  <p>Welcome to the Church of Citatsia website.</p>
+</section>
 
-<div class="spacer content"></div>
-<div class="container">
+{$gametrackerHtml}
+
+<section class="container">
   <div class="section-title">News</div>
   <div class="spacer section-title"></div>
   $newsForumBoardHtml
-</div>
+</section>
 
 HTML;
 

@@ -1,0 +1,52 @@
+// Styles only effecting elements on the about page.
+.about-community-links {
+  margin-top: $spacing-medium;
+  list-style: none;
+}
+
+.donate-benefits-table {
+  @extend %layer-1;
+  border-collapse: collapse;
+  width: 1000px;
+  background-color: $card-background-color;
+  color: $card-color;
+  margin: $spacing-medium auto 0;
+
+  th, td {
+    width: 33.3333%;
+    padding: 12px $spacing-medium;
+
+    &:nth-child(1) {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  thead th {
+    background-color: $color-electric-lime;
+    color: $color-deep-plum;
+    font-weight: bold;
+    border: 1px solid $color-white;
+    border-top: none;
+    font-size: 19px;
+  }
+
+  tfoot th {
+    text-align: left;
+    vertical-align: top;
+  }
+
+  td,
+  tfoot th {
+    border: 1px solid $color-off-white;
+    border-bottom: none;
+  }
+}
+.donate-button {
+  margin: 0 auto;
+  padding: 8px 0;
+  font-size: 19px;
+  width: 300px;
+}

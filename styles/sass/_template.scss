@@ -5,7 +5,8 @@
 }
 
 html, body,
-ul, ol, li {
+ul, ol, li,
+p {
   margin: 0;
   padding: 0;
 }
@@ -27,8 +28,10 @@ body {
 }
 
 .container {
-  padding: 0 $content-padding;
-  margin: 0 auto;
+  padding-left: $content-padding;
+  padding-right: $content-padding;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1920px;
 }
 
@@ -90,6 +93,17 @@ a {
   }
 }
 
+// Titles and sections
+section {
+  padding-top: $content-padding;
+  display: block;
+}
+
+.page-title {
+  font-size: 30px;
+  text-align: left;
+}
+
 .section-title {
   font-size: 23px;
   text-align: left;
@@ -101,13 +115,15 @@ a {
 }
 
 .card-link {
+  @extend %layer-1;
   &, &:link, &:visited {
     display: block;
+    text-align: center;
     background-color: $card-link-passive-background-color;
     color: $card-link-passive-color;
   }
 
-  &:hover, &:visited {
+  &:hover, &:active {
     background-color: $card-link-active-background-color;
     color: $card-link-active-color;
   }
