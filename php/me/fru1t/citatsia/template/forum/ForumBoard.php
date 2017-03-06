@@ -1,25 +1,30 @@
 <?php
 namespace me\fru1t\citatsia\template\forum;
+use me\fru1t\common\language\Preconditions;
 use me\fru1t\common\template\Template;
 use me\fru1t\common\template\TemplateField;
 
 /**
- * An element that contains a group of post titles.
+ * Groups together one or more forum post summaries into a "board". Eg. a News board would contain
+ * multiple news headers (post summaries).
  */
 class ForumBoard extends Template {
   public const FIELD_POSTS = 'posts';
+  public const FIELD_TITLE = 'title';
 
   /**
    * Creates an instance of this class from posts.
-   * @param ForumBoardPost[] ...$forumBoardPosts The posts to group.
+   *
+   * @param null|string $title
+   * @param ForumPostSummary[] ...$forumBoardPosts The posts to group.
    * @return ForumBoard A reader-ready object.
    */
-  public static function createFrom(array $forumBoardPosts): ForumBoard {
+  public static function createFrom(?string $title, array $forumBoardPosts): ForumBoard {
     $postHtml = '';
     foreach ($forumBoardPosts as $forumBoardPost) {
       $postHtml .= $forumBoardPost->render(false, true);
     }
-    return ForumBoard::start()->with(self::FIELD_POSTS, $postHtml);
+    return ForumBoard::start()->with(self::FIELD_POSTS, $postHtml)->with(self::FIELD_TITLE, $title);
   }
 
   /**
@@ -29,10 +34,21 @@ class ForumBoard extends Template {
    * @return string
    */
   public static function getTemplateRenderContents_internal(array $fields): string {
+    $titleHtml = '';
+    if (!Preconditions::isNullEmptyOrWhitespace($fields[self::FIELD_TITLE])) {
+      $titleHtml = <<<HTML
+<div class="section-title">{$fields[self::FIELD_TITLE]}</div>
+<div class="spacer section-title"></div>
+HTML;
+    }
+
     return <<<HTML
-<div class="forum-board">
-  {$fields[self::FIELD_POSTS]}
-</div>
+<section class="container">
+  {$titleHtml}
+  <div class="forum-board">
+    {$fields[self::FIELD_POSTS]}
+  </div>
+</section>
 HTML;
 
   }
@@ -42,6 +58,9 @@ HTML;
    * @return TemplateField[]
    */
   static function getTemplateFields_internal(): array {
-    return TemplateField::createFrom(self::FIELD_POSTS);
+    return [
+        TemplateField::newBuilder()->called(self::FIELD_POSTS)->asRequired()->build(),
+        TemplateField::newBuilder()->called(self::FIELD_TITLE)->build()
+    ];
   }
 }

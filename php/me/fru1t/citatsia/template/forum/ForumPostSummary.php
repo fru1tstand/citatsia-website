@@ -4,10 +4,9 @@ use me\fru1t\common\template\Template;
 use me\fru1t\common\template\TemplateField;
 
 /**
- * An element within a forum board that shows title, comments, author, post date, and the body of a
- * post.
+ * Summarizes a forum post to be displayed as a header in a board.
  */
-class ForumBoardPost extends Template {
+class ForumPostSummary extends Template {
   public const FIELD_TITLE = "title";
   public const FIELD_POST_URL = "post-url";
   public const FIELD_COMMENTS = "comments";
@@ -25,7 +24,7 @@ class ForumBoardPost extends Template {
    */
   public static function getTemplateRenderContents_internal(array $fields): string {
     return <<<HTML
-<div class="forum-board-post">
+<div class="forum-post-summary">
   <div class="header">
     <div class="title"><a href="{$fields[self::FIELD_POST_URL]}">{$fields[self::FIELD_TITLE]}</a></div>
     <div class="comments">{$fields[self::FIELD_COMMENTS]}</div>

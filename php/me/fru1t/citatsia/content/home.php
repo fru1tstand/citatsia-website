@@ -5,7 +5,7 @@ use me\fru1t\citatsia\template\EmptyPage;
 use me\fru1t\citatsia\template\forum\ForumBoard;
 use me\fru1t\citatsia\template\prefab\Gametracker;
 
-$newsForumBoardHtml = ForumBoard::createFrom(FakeData::getFakeForumBoardPosts())
+$newsForumBoardHtml = ForumBoard::createFrom('News', FakeData::getFakeForumBoardPosts())
     ->render(false, true);
 $gametrackerHtml = Gametracker::start()->render(false, true);
 
@@ -17,11 +17,7 @@ $body = <<<HTML
 
 {$gametrackerHtml}
 
-<section class="container">
-  <div class="section-title">News</div>
-  <div class="spacer section-title"></div>
-  $newsForumBoardHtml
-</section>
+{$newsForumBoardHtml}
 
 HTML;
 
